@@ -1,0 +1,33 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Secrets and licenses
+.env
+*.key
+*freesurfer*license*
+license.txt
+
+# Raw MRI data
+data/raw/
+
+# FreeSurfer outputs - very large
+data/derivatives/
+
+# Generated QC images
+data/qc/images/
+
+# Generated analysis outputs
+data/processed/roi_features/
+data/processed/msn/
+data/processed/mind/
+
+# Batch/runtime logs
+logs/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/

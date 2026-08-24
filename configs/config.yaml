@@ -1,0 +1,28 @@
+project_root: .
+dataset:
+  name: ds000030
+  bids_dir: data/raw/ds000030
+  participants_tsv: data/raw/ds000030/participants.tsv
+  # Verify this after inspecting participants.tsv.
+  diagnosis_column: diagnosis
+  case_values: ["SCHZ", "Schizophrenia", "schizophrenia"]
+  control_values: ["CONTROL", "Control", "control", "Healthy Control"]
+freesurfer:
+  subjects_dir: data/derivatives/freesurfer
+  docker_image: freesurfer/freesurfer:7.4.1
+  license_file: /ABSOLUTE/PATH/TO/license.txt
+morphometry:
+  features: ["CT", "MC", "Vol", "SD", "SA"]
+  parcellation: aparc
+paths:
+  roi_features: data/processed/roi_features
+  msn: data/processed/msn
+  mind: data/processed/mind
+  datasets: data/processed/datasets
+  results: results
+mind:
+  repo_dir: external/MIND
+graph:
+  densities: [0.10, 0.20, 0.30]
+  rank_mode: absolute
+seed: 42
