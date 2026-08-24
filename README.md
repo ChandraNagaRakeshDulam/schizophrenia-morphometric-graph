@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Schizophrenia Subject-Specific Morphometric Graph Starter
 
 Starter implementation for:
@@ -110,3 +111,6 @@ python scripts/10_train_gnn.py \
 ```
 
 Read every generated CSV before moving to the next phase.
+=======
+# schizophrenia-morphometric-graph
+>>>>>>> 2c24a11483f18fb76f3fcccd4686e1b68b22f45e
