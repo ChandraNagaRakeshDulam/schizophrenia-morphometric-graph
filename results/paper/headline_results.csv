@@ -1,0 +1,11 @@
+Finding,Value
+ROI-RF external ROC-AUC,"0.6965 [0.5696, 0.8157]"
+MSN-GAT external ROC-AUC,"0.6504 [0.5165, 0.7730]"
+MIND-GAT external ROC-AUC,"0.4600 [0.3226, 0.5991]"
+ROI-RF minus MSN-GAT ROC-AUC,"+0.0461 [-0.0783, 0.1696]"
+MSN-GAT minus MIND-GAT ROC-AUC,"+0.1904 [0.0670, 0.3130]"
+SZ cross-cohort ROI Spearman,0.2747
+SZ top-10 ROI Jaccard,0.1111
+SZ feature Spearman,0.8000
+External all-subject top-10 faithfulness advantage,"0.3486 [0.2839, 0.4150]"
+External SZ top-10 faithfulness advantage,"0.3129 [0.2303, 0.4002]"

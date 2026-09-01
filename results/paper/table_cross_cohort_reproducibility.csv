@@ -1,0 +1,3 @@
+Group,Internal N,External N,ROI Spearman,Top-10 Jaccard,Top-10 overlap,Bootstrap Spearman CI lower,Bootstrap Spearman CI upper,Bootstrap Jaccard CI lower,Bootstrap Jaccard CI upper
+CONTROL,125,25,0.27762720922243006,0.05263157894736842,rh_transversetemporal,0.03717696682826277,0.3787857388250563,0.0,0.25
+SZ,50,46,0.2746879413673321,0.1111111111111111,rh_fusiform; rh_transversetemporal,-0.0011108142153681575,0.3645579646524409,0.05263157894736842,0.3333333333333333
