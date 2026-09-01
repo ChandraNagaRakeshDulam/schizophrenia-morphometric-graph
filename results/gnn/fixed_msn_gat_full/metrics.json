@@ -1,0 +1,8 @@
+{
+  "roc_auc": 0.6683377777777779,
+  "pr_auc": 0.45990069926495847,
+  "device": "cuda",
+  "outer_cv": "5-fold x 3 repeats",
+  "topology": "training_consensus_msn",
+  "subject_specific_edges": false
+}

@@ -46,5 +46,5 @@ def make_graph(X, A, y, density, rank_mode="absolute", subject_index=None):
         y=torch.tensor([int(y)], dtype=torch.float32),
     )
     if subject_index is not None:
-        data.subject_index = torch.tensor([int(subject_index)], dtype=torch.long)
+        data.sample_idx = torch.tensor([int(subject_index)], dtype=torch.long)
     return data

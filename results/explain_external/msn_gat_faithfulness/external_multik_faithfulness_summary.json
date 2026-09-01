@@ -1,0 +1,192 @@
+{
+  "1": {
+    "ALL": {
+      "n": 71,
+      "top_confidence_drop": 0.09609111793286784,
+      "random_confidence_drop": 0.00418298889974683,
+      "advantage": {
+        "mean": 0.09190812903312101,
+        "median": 0.009670858383178712,
+        "lower_95": 0.05683968351796781,
+        "upper_95": 0.13139800721868333,
+        "positive_fraction": 0.7605633802816901
+      }
+    },
+    "SZ": {
+      "n": 46,
+      "top_confidence_drop": 0.10419728525954744,
+      "random_confidence_drop": 0.004705787057299977,
+      "advantage": {
+        "mean": 0.09949149820224747,
+        "median": 0.0023571333289146425,
+        "lower_95": 0.04915632589147223,
+        "upper_95": 0.15795451025990762,
+        "positive_fraction": 0.717391304347826
+      }
+    },
+    "TP_SZ": {
+      "n": 36,
+      "top_sz_probability_drop": 0.05094289117389255,
+      "random_sz_probability_drop": 0.005736646263135805,
+      "advantage": {
+        "mean": 0.045206244910756754,
+        "median": 0.0014022725820541382,
+        "lower_95": 0.017383060625961257,
+        "upper_95": 0.0816606704448867,
+        "positive_fraction": 0.6944444444444444
+      }
+    }
+  },
+  "5": {
+    "ALL": {
+      "n": 71,
+      "top_confidence_drop": 0.29215511484202783,
+      "random_confidence_drop": 0.023479090360481892,
+      "advantage": {
+        "mean": 0.268676024481546,
+        "median": 0.24544846534729003,
+        "lower_95": 0.21383940384057096,
+        "upper_95": 0.3244075194060554,
+        "positive_fraction": 0.9436619718309859
+      }
+    },
+    "SZ": {
+      "n": 46,
+      "top_confidence_drop": 0.2726380200651677,
+      "random_confidence_drop": 0.02345130369229161,
+      "advantage": {
+        "mean": 0.24918671637287607,
+        "median": 0.20405079171061516,
+        "lower_95": 0.17603567238170248,
+        "upper_95": 0.3241380910558788,
+        "positive_fraction": 0.9347826086956522
+      }
+    },
+    "TP_SZ": {
+      "n": 36,
+      "top_sz_probability_drop": 0.2308046801222695,
+      "random_sz_probability_drop": 0.026168597456999128,
+      "advantage": {
+        "mean": 0.2046360826652704,
+        "median": 0.06879935771226883,
+        "lower_95": 0.1317716893103724,
+        "upper_95": 0.2841805673378468,
+        "positive_fraction": 0.9444444444444444
+      }
+    }
+  },
+  "10": {
+    "ALL": {
+      "n": 71,
+      "top_confidence_drop": 0.3937356298417181,
+      "random_confidence_drop": 0.045147912751466804,
+      "advantage": {
+        "mean": 0.34858771709025127,
+        "median": 0.40608026154339316,
+        "lower_95": 0.2839269510464002,
+        "upper_95": 0.414956808959575,
+        "positive_fraction": 0.9154929577464789
+      }
+    },
+    "SZ": {
+      "n": 46,
+      "top_confidence_drop": 0.3570010239655739,
+      "random_confidence_drop": 0.044073175128913775,
+      "advantage": {
+        "mean": 0.3129278488366602,
+        "median": 0.23560708671808245,
+        "lower_95": 0.23028560663437542,
+        "upper_95": 0.40018967161871083,
+        "positive_fraction": 0.9130434782608695
+      }
+    },
+    "TP_SZ": {
+      "n": 36,
+      "top_sz_probability_drop": 0.37623909895935664,
+      "random_sz_probability_drop": 0.04888389267674131,
+      "advantage": {
+        "mean": 0.32735520628261544,
+        "median": 0.2087038525938988,
+        "lower_95": 0.23499160572576022,
+        "upper_95": 0.42371139603352637,
+        "positive_fraction": 1.0
+      }
+    }
+  },
+  "15": {
+    "ALL": {
+      "n": 71,
+      "top_confidence_drop": 0.4234447725081134,
+      "random_confidence_drop": 0.06573363737993491,
+      "advantage": {
+        "mean": 0.3577111351281784,
+        "median": 0.34288289248943327,
+        "lower_95": 0.2864285042225075,
+        "upper_95": 0.42721075230356936,
+        "positive_fraction": 0.8732394366197183
+      }
+    },
+    "SZ": {
+      "n": 46,
+      "top_confidence_drop": 0.3702114637278061,
+      "random_confidence_drop": 0.06223619296352136,
+      "advantage": {
+        "mean": 0.3079752707642847,
+        "median": 0.26946849457919597,
+        "lower_95": 0.22584640926040794,
+        "upper_95": 0.38902439186154886,
+        "positive_fraction": 0.8913043478260869
+      }
+    },
+    "TP_SZ": {
+      "n": 36,
+      "top_sz_probability_drop": 0.43652878101824577,
+      "random_sz_probability_drop": 0.07168787298077302,
+      "advantage": {
+        "mean": 0.3648409080374727,
+        "median": 0.31783707469701766,
+        "lower_95": 0.2803998656237543,
+        "upper_95": 0.4533702670364808,
+        "positive_fraction": 1.0
+      }
+    }
+  },
+  "20": {
+    "ALL": {
+      "n": 71,
+      "top_confidence_drop": 0.4494123014057396,
+      "random_confidence_drop": 0.08946885956735777,
+      "advantage": {
+        "mean": 0.3599434418383819,
+        "median": 0.3904740818962455,
+        "lower_95": 0.2897976349509841,
+        "upper_95": 0.43224744990474434,
+        "positive_fraction": 0.8169014084507042
+      }
+    },
+    "SZ": {
+      "n": 46,
+      "top_confidence_drop": 0.4144712153761445,
+      "random_confidence_drop": 0.08575234510293027,
+      "advantage": {
+        "mean": 0.3287188702732142,
+        "median": 0.34390883415937423,
+        "lower_95": 0.24089377701019937,
+        "upper_95": 0.4171442945283602,
+        "positive_fraction": 0.8260869565217391
+      }
+    },
+    "TP_SZ": {
+      "n": 36,
+      "top_sz_probability_drop": 0.537429632502608,
+      "random_sz_probability_drop": 0.09800755251250745,
+      "advantage": {
+        "mean": 0.4394220799901005,
+        "median": 0.4296408987045288,
+        "lower_95": 0.35956722854639195,
+        "upper_95": 0.5224148507328936,
+        "positive_fraction": 1.0
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+fs_id,subject_id,required_files_ok,missing_files,log_reports_error,manual_surface_qc,final_qc_pass
+ds000030_sub-10159,sub-10159,True,,False,PENDING,False
+ds000030_sub-10171,sub-10171,True,,False,PENDING,False
+ds000030_sub-10189,sub-10189,True,,False,PENDING,False
+ds000030_sub-10193,sub-10193,True,,False,PENDING,False
+ds000030_sub-10206,sub-10206,True,,False,PENDING,False
+ds000030_sub-10217,sub-10217,True,,False,PENDING,False
+ds000030_sub-50004,sub-50004,True,,False,PENDING,False

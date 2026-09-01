@@ -1,0 +1,72 @@
+{
+  "dataset": "data/processed/ds004302_arrays.npz",
+  "model": "results/final/roi_rf_ds000030/final_roi_rf_ds000030.joblib",
+  "n": 71,
+  "cases": 46,
+  "controls": 25,
+  "external_prevalence": 0.647887323943662,
+  "pr_auc_random_baseline": 0.647887323943662,
+  "threshold": 0.5,
+  "threshold_tuned_on_external": false,
+  "external_data_used_for_model_selection": false,
+  "best_params": {
+    "max_depth": 10,
+    "max_features": "sqrt",
+    "n_estimators": 600
+  },
+  "metrics": {
+    "roc_auc": 0.6965217391304347,
+    "pr_auc": 0.8274552824135005,
+    "accuracy": 0.6197183098591549,
+    "balanced_accuracy": 0.6426086956521739,
+    "sensitivity": 0.5652173913043478,
+    "specificity": 0.72,
+    "precision": 0.7878787878787878,
+    "recall": 0.5652173913043478,
+    "f1": 0.6582278481012658,
+    "tn": 18,
+    "fp": 7,
+    "fn": 20,
+    "tp": 26
+  },
+  "bootstrap_95_ci": {
+    "roc_auc": {
+      "lower_95": 0.5695652173913044,
+      "upper_95": 0.8156521739130435
+    },
+    "pr_auc": {
+      "lower_95": 0.7505668549726037,
+      "upper_95": 0.9016132957936341
+    },
+    "accuracy": {
+      "lower_95": 0.5070422535211268,
+      "upper_95": 0.7323943661971831
+    },
+    "balanced_accuracy": {
+      "lower_95": 0.5265217391304348,
+      "upper_95": 0.7552173913043478
+    },
+    "sensitivity": {
+      "lower_95": 0.41304347826086957,
+      "upper_95": 0.717391304347826
+    },
+    "specificity": {
+      "lower_95": 0.52,
+      "upper_95": 0.88
+    },
+    "precision": {
+      "lower_95": 0.6756756756756757,
+      "upper_95": 0.90625
+    },
+    "recall": {
+      "lower_95": 0.41304347826086957,
+      "upper_95": 0.717391304347826
+    },
+    "f1": {
+      "lower_95": 0.5316455696202531,
+      "upper_95": 0.7710843373493976
+    }
+  },
+  "bootstrap_iterations": 10000,
+  "bootstrap_method": "subject-level stratified percentile bootstrap"
+}

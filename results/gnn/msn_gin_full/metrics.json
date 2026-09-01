@@ -1,0 +1,7 @@
+{
+  "roc_auc": 0.5676444444444445,
+  "pr_auc": 0.34345909118978035,
+  "device": "cuda",
+  "outer_cv": "5-fold x 3 repeats",
+  "uses_edge_weights": false
+}

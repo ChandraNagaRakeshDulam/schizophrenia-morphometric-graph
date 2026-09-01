@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 import torch
 import torch.nn as nn
-from sklearn.model_selection import StratifiedKFold
+from sklearn.model_selection import StratifiedKFold, RepeatedStratifiedKFold
 from sklearn.metrics import roc_auc_score, average_precision_score
 from torch_geometric.loader import DataLoader
 from torch_geometric.nn import GCNConv, SAGEConv, GINConv, GATConv, GATv2Conv, global_mean_pool
@@ -27,7 +27,7 @@ def evaluate(model, loader, device):
         logits = model(b.x, b.edge_index, b.batch)
         ys.extend(b.y.view(-1).cpu().numpy().tolist())
         ss.extend(torch.sigmoid(logits).cpu().numpy().tolist())
-        idxs.extend(b.subject_index.view(-1).cpu().numpy().tolist())
+        idxs.extend(b.sample_idx.view(-1).cpu().numpy().tolist())
     auc = roc_auc_score(ys, ss) if len(set(ys)) > 1 else np.nan
     return auc, np.asarray(ys), np.asarray(ss), np.asarray(idxs)
 
@@ -86,16 +86,18 @@ def main():
     out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    outer = StratifiedKFold(n_splits=5, shuffle=True, random_state=a.seed)
+    outer = RepeatedStratifiedKFold(n_splits=5, n_repeats=3, random_state=a.seed)
     pred_rows = []
 
-    for fold, (tr, te) in enumerate(outer.split(X, y)):
+    for split_id, (tr, te) in enumerate(outer.split(X, y)):
+        repeat = split_id // 5
+        fold = split_id % 5
         candidates = []
         for density in a.densities:
             for hidden in a.hidden:
-                s = inner_score(X, A, y, tr, density, hidden, a.model, a.rank_mode, a.seed + fold*100, device)
+                s = inner_score(X, A, y, tr, density, hidden, a.model, a.rank_mode, a.seed + split_id*100, device)
                 candidates.append((s, density, hidden))
-                print("fold", fold, "candidate", density, hidden, "inner_auc", s)
+                print("split", split_id, "repeat", repeat, "fold", fold, "candidate", density, hidden, "inner_auc", s)
         candidates.sort(reverse=True, key=lambda z: z[0])
         best_auc, density, hidden = candidates[0]
 
@@ -105,7 +107,7 @@ def main():
         gtr = build_graphs(Xs, A, y, tr, density, a.rank_mode)
         gte = build_graphs(Xs, A, y, te, density, a.rank_mode)
 
-        model = train_fixed_epochs(gtr, a.model, hidden, epochs=120, seed=a.seed + fold, device=device)
+        model = train_fixed_epochs(gtr, a.model, hidden, epochs=120, seed=a.seed + split_id, device=device)
         auc, yt, st, idxs = evaluate(model, DataLoader(gte, batch_size=16), device)
 
         ckpt = {
@@ -116,14 +118,17 @@ def main():
             "rank_mode": a.rank_mode,
             "mean": mean.astype(np.float32),
             "std": std.astype(np.float32),
+            "split": split_id,
+            "repeat": repeat,
+            "fold": fold,
             "test_indices": te,
             "inner_best_auc": best_auc,
         }
-        torch.save(ckpt, out / f"fold_{fold}.pt")
+        torch.save(ckpt, out / f"split_{split_id}.pt")
 
         for yy, ss, ii in zip(yt, st, idxs):
             pred_rows.append({
-                "fold": fold, "subject_index": int(ii), "subject_id": ids[ii],
+                "split": split_id, "repeat": repeat, "fold": fold, "subject_index": int(ii), "subject_id": ids[ii],
                 "y": int(yy), "score": float(ss), "density": density,
                 "hidden": hidden, "inner_best_auc": best_auc,
             })
@@ -132,7 +137,7 @@ def main():
     pred.to_csv(out / "outer_predictions.csv", index=False)
     roc = roc_auc_score(pred.y, pred.score)
     pr = average_precision_score(pred.y, pred.score)
-    metrics = {"roc_auc": float(roc), "pr_auc": float(pr), "device": str(device)}
+    metrics = {"roc_auc": float(roc), "pr_auc": float(pr), "device": str(device), "outer_cv": "5-fold x 3 repeats", "uses_edge_weights": False}
     (out / "metrics.json").write_text(json.dumps(metrics, indent=2))
     print(json.dumps(metrics, indent=2))
     print("NOTE: this starter nests density/hidden width, but final paper should also nest all optimizer/regularization/epoch choices or preregister them.")

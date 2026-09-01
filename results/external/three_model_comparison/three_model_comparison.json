@@ -1,0 +1,85 @@
+{
+  "n": 71,
+  "cases": 46,
+  "controls": 25,
+  "observed": {
+    "ROI-RF": {
+      "roc_auc": 0.6965217391304347,
+      "pr_auc": 0.8274552824135005,
+      "balanced_accuracy": 0.6426086956521739
+    },
+    "MSN-GAT": {
+      "roc_auc": 0.6504347826086957,
+      "pr_auc": 0.791333328118577,
+      "balanced_accuracy": 0.511304347826087
+    },
+    "MIND-GAT": {
+      "roc_auc": 0.45999999999999996,
+      "pr_auc": 0.6469738538771557,
+      "balanced_accuracy": 0.4260869565217391
+    }
+  },
+  "paired_bootstrap": {
+    "ROI-RF_minus_MSN-GAT": {
+      "roc_auc": {
+        "observed": 0.046086956521739,
+        "lower_95": -0.07828260869565226,
+        "upper_95": 0.16956521739130437,
+        "prob_delta_gt_0": 0.7661
+      },
+      "pr_auc": {
+        "observed": 0.036121954294923486,
+        "lower_95": -0.05631531890132141,
+        "upper_95": 0.12462468778351878,
+        "prob_delta_gt_0": 0.7693
+      },
+      "balanced_accuracy": {
+        "observed": 0.1313043478260869,
+        "lower_95": 0.009565217391304337,
+        "upper_95": 0.2565217391304348,
+        "prob_delta_gt_0": 0.9821
+      }
+    },
+    "ROI-RF_minus_MIND-GAT": {
+      "roc_auc": {
+        "observed": 0.23652173913043473,
+        "lower_95": 0.09304347826086956,
+        "upper_95": 0.38,
+        "prob_delta_gt_0": 0.9996
+      },
+      "pr_auc": {
+        "observed": 0.18048142853634486,
+        "lower_95": 0.05522351126391581,
+        "upper_95": 0.2708105071957065,
+        "prob_delta_gt_0": 0.9983
+      },
+      "balanced_accuracy": {
+        "observed": 0.21652173913043482,
+        "lower_95": 0.1004347826086956,
+        "upper_95": 0.33652173913043487,
+        "prob_delta_gt_0": 0.9998
+      }
+    },
+    "MSN-GAT_minus_MIND-GAT": {
+      "roc_auc": {
+        "observed": 0.19043478260869573,
+        "lower_95": 0.06695652173913047,
+        "upper_95": 0.3130434782608696,
+        "prob_delta_gt_0": 0.9986
+      },
+      "pr_auc": {
+        "observed": 0.14435947424142137,
+        "lower_95": 0.022527207130959823,
+        "upper_95": 0.23793283735893964,
+        "prob_delta_gt_0": 0.9915
+      },
+      "balanced_accuracy": {
+        "observed": 0.08521739130434791,
+        "lower_95": -0.030869565217391315,
+        "upper_95": 0.1995652173913044,
+        "prob_delta_gt_0": 0.9265
+      }
+    }
+  },
+  "bootstrap_iterations": 10000
+}

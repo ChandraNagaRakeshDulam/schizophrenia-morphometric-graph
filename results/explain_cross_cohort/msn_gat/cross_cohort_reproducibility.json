@@ -1,0 +1,141 @@
+{
+  "CONTROL": {
+    "n_internal": 125,
+    "n_external": 25,
+    "roi_spearman": 0.27762720922243006,
+    "top_10_jaccard": 0.05263157894736842,
+    "top_10_overlap": [
+      "rh_transversetemporal"
+    ],
+    "bootstrap": {
+      "spearman": {
+        "mean": 0.20749671336412567,
+        "lower_95": 0.03717696682826277,
+        "upper_95": 0.3787857388250563
+      },
+      "topk_jaccard": {
+        "mean": 0.10716951201533248,
+        "lower_95": 0.0,
+        "upper_95": 0.25
+      }
+    }
+  },
+  "SZ": {
+    "n_internal": 50,
+    "n_external": 46,
+    "roi_spearman": 0.2746879413673321,
+    "top_10_jaccard": 0.1111111111111111,
+    "top_10_overlap": [
+      "rh_fusiform",
+      "rh_transversetemporal"
+    ],
+    "bootstrap": {
+      "spearman": {
+        "mean": 0.1820367370309577,
+        "lower_95": -0.0011108142153681575,
+        "upper_95": 0.3645579646524409
+      },
+      "topk_jaccard": {
+        "mean": 0.1551562779497764,
+        "lower_95": 0.05263157894736842,
+        "upper_95": 0.3333333333333333
+      }
+    }
+  },
+  "feature_reproducibility": {
+    "CONTROL": {
+      "spearman": 0.6,
+      "internal_ranking": [
+        {
+          "feature": "MC",
+          "importance": 0.2289190121011368
+        },
+        {
+          "feature": "CT",
+          "importance": 0.19856845025063072
+        },
+        {
+          "feature": "SD",
+          "importance": 0.19564257173730187
+        },
+        {
+          "feature": "SA",
+          "importance": 0.18952140099373196
+        },
+        {
+          "feature": "Vol",
+          "importance": 0.1873485649171987
+        }
+      ],
+      "external_ranking": [
+        {
+          "feature": "CT",
+          "importance": 0.2184109653200666
+        },
+        {
+          "feature": "SD",
+          "importance": 0.20615107813682282
+        },
+        {
+          "feature": "MC",
+          "importance": 0.2052929230351379
+        },
+        {
+          "feature": "Vol",
+          "importance": 0.18871475972925275
+        },
+        {
+          "feature": "SA",
+          "importance": 0.18143027377871995
+        }
+      ]
+    },
+    "SZ": {
+      "spearman": 0.7999999999999999,
+      "internal_ranking": [
+        {
+          "feature": "MC",
+          "importance": 0.23131564314533143
+        },
+        {
+          "feature": "CT",
+          "importance": 0.21261199017538288
+        },
+        {
+          "feature": "SD",
+          "importance": 0.19479998125965395
+        },
+        {
+          "feature": "SA",
+          "importance": 0.18176765721838337
+        },
+        {
+          "feature": "Vol",
+          "importance": 0.17950472820124844
+        }
+      ],
+      "external_ranking": [
+        {
+          "feature": "CT",
+          "importance": 0.2262487867498368
+        },
+        {
+          "feature": "MC",
+          "importance": 0.20151055468956516
+        },
+        {
+          "feature": "SD",
+          "importance": 0.1998877136534099
+        },
+        {
+          "feature": "Vol",
+          "importance": 0.1934412071545999
+        },
+        {
+          "feature": "SA",
+          "importance": 0.17891173775258828
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "dataset": "data/processed/ds004302_arrays.npz",
+  "checkpoint": "results/final/msn_gat_ds000030/final_msn_gat_ds000030.pt",
+  "n": 71,
+  "cases": 46,
+  "controls": 25,
+  "external_prevalence": 0.647887323943662,
+  "pr_auc_random_baseline": 0.647887323943662,
+  "threshold": 0.5,
+  "threshold_tuned_on_external": false,
+  "external_data_used_for_model_selection": false,
+  "density": 0.2,
+  "hidden": 64,
+  "rank_mode": "absolute",
+  "uses_edge_weights": false,
+  "metrics": {
+    "roc_auc": 0.6504347826086957,
+    "pr_auc": 0.791333328118577,
+    "accuracy": 0.5915492957746479,
+    "balanced_accuracy": 0.511304347826087,
+    "sensitivity": 0.782608695652174,
+    "specificity": 0.24,
+    "precision": 0.6545454545454545,
+    "recall": 0.782608695652174,
+    "f1": 0.7128712871287128,
+    "tn": 6,
+    "fp": 19,
+    "fn": 10,
+    "tp": 36
+  },
+  "bootstrap_95_ci": {
+    "roc_auc": {
+      "lower_95": 0.5165217391304348,
+      "upper_95": 0.7730434782608695
+    },
+    "pr_auc": {
+      "lower_95": 0.6993859613614575,
+      "upper_95": 0.8820505677507386
+    },
+    "accuracy": {
+      "lower_95": 0.49295774647887325,
+      "upper_95": 0.6901408450704225
+    },
+    "balanced_accuracy": {
+      "lower_95": 0.4095652173913043,
+      "upper_95": 0.6147826086956522
+    },
+    "sensitivity": {
+      "lower_95": 0.6521739130434783,
+      "upper_95": 0.8913043478260869
+    },
+    "specificity": {
+      "lower_95": 0.08,
+      "upper_95": 0.4
+    },
+    "precision": {
+      "lower_95": 0.5925925925925926,
+      "upper_95": 0.7169811320754716
+    },
+    "recall": {
+      "lower_95": 0.6521739130434783,
+      "upper_95": 0.8913043478260869
+    },
+    "f1": {
+      "lower_95": 0.631578947368421,
+      "upper_95": 0.7818181818181819
+    }
+  },
+  "bootstrap_iterations": 10000,
+  "bootstrap_method": "subject-level stratified percentile bootstrap"
+}

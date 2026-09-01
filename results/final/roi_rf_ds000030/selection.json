@@ -1,0 +1,14 @@
+{
+  "model": "RandomForestClassifier",
+  "representation": "DK68 regional morphology",
+  "features": 340,
+  "best_params": {
+    "max_depth": 10,
+    "max_features": "sqrt",
+    "n_estimators": 600
+  },
+  "development_cv_mean_auc": 0.7129333333333333,
+  "development_dataset": "data/processed/ds000030_arrays.npz",
+  "external_dataset_used_for_selection": false,
+  "threshold": 0.5
+}

@@ -1,0 +1,20 @@
+{
+  "development_dataset": "data/processed/ds000030_arrays.npz",
+  "external_dataset_used_for_selection": false,
+  "representation": "MSN",
+  "model": "GAT",
+  "selected_density": 0.2,
+  "selected_hidden": 64,
+  "rank_mode": "absolute",
+  "epochs": 120,
+  "optimizer": "AdamW",
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "uses_edge_weights": false,
+  "training_subjects": 175,
+  "cases": 50,
+  "controls": 125,
+  "selection_cv": "RepeatedStratifiedKFold 5x3",
+  "selection_metric": "ROC-AUC",
+  "selection_rule": "Maximum mean development-only CV ROC-AUC; tie-break lower density then lower hidden"
+}
